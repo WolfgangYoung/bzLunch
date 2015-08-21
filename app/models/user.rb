@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
                                     #不区分大小写
                                     uniqueness: { case_sensitive: false }
   has_secure_password
-  validates :password, length:{ maximum: 20 }                                  
+  validates :password, length:{ maximum: 20 }, allow_blank: true                                 
 end
